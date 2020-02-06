@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Prime</title>
+    <link rel="stylesheet" href="~/Styles/StyleSheet.css" type="text/css" runat="server"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div id="wrapper">
+            <div id="banner">
+                <p style="text-align:center; color:#495352; font-variant: small-caps; font-size: 32px;">
+                    <asp:Image ID="Image2" runat="server" Height="30px" ImageUrl="~/Images/Logo.png" Width="55px" />Prime Computers 
+                  <!--  <asp:TextBox ID="srchBox" runat="server" style="-moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            background-color: #EAEAEA;
+            background: -moz-linear-gradient(top, #fff, #EAEAEA);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0, 0, #FFF), color-stop(1, 0, #EAEAEA));
+            border: 1px solid #CACACA;
+            color: #444;
+            margin-left:400px; height:25px;
+            padding: 5px 9px;
+            width: 260px;"/>
+                    <asp:Button ID="srchBtn" runat="server" Text="Search" style="padding: 10px;
+            color: #ffffff;
+            border: 0;
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            clear: both;
+            background: linear-gradient(to bottom, #1A847F, #5DDED8);" />-->
+                </p>
+                <asp:Image ID="Image1" runat="server" Height="277px" ImageUrl="~/Images/48-1-1024x653.jpg" Width="100%" />
+
+            </div>
+            <div id="navigation">
+                <ul id="nav">
+                    <li><asp:HyperLink ID="HyperLink1" NavigateUrl="start.aspx" runat="server">Home</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="HyperLink2" NavigateUrl="~/Pages/Welcome.aspx" runat="server">Offerings</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Pages/Support.aspx">Help and Support</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Pages/Management/Management.aspx">Management</asp:HyperLink></li>
+                    
+                    <li style="float: right;">
+                        <asp:HyperLink ID="lnkRegister" NavigateUrl="~/Pages/Account/Register.aspx" runat="server">Register</asp:HyperLink>
+                        <asp:HyperLink ID="litStatus" runat="server" NavigateUrl="~/Pages/ShoppingCart.aspx" />
+                    </li>
+
+                    <li style="float: right;">
+                        <asp:HyperLink ID="lnkLogin" NavigateUrl="~/Pages/Account/Login.aspx" runat="server">Log In</asp:HyperLink>
+                        <asp:LinkButton ID="lnkLogout" runat="server" OnClick="lnkLogout_Click">Log Out</asp:LinkButton>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="content">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                </asp:ContentPlaceHolder>
+            </div>
+            <div style="background-color: #495352; color: #C3E1DE;">
+                <table style="width:100%">
+                    <tr>
+                        <td>Contact us:
+                            <hr />
+                            56/1, Kazi Mahtabuddin Road<br>
+                            Khulna<br>
+                            <i class="fas fa-phone"></i> +8804161914<br>
+                            <i class="fas fa-mobile-alt"></i> +8801705514944
+                            <hr />
+                        </td>
+                        <td>Social Media
+                            <hr />
+                            <i class="fab fa-facebook"></i> facebook.com/prime_computers<br />
+                             <i class="fab fa-twitter">twitter.com/computers_prime</i>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
